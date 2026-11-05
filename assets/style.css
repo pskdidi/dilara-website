@@ -15,3 +15,44 @@
 .hero-tag--sand{background:#e9ddcd;color:#514438}
 .hero-tag--mist{background:#e1e4de;color:#435047}
 @media(max-width:760px){.hero-tags{gap:8px;margin-top:18px}.hero-tag{font-size:11px;padding:9px 11px;white-space:normal}}
+
+
+/* Yeni ana sayfa: sicak akademik tasarim */
+body{background:#f8f5ef}
+.nav .brand{display:flex;align-items:center;gap:13px;white-space:normal;line-height:1.3}
+.brand-mark{width:56px;height:38px;flex:none;color:#334334;border-right:1px solid #a8afa1;padding-right:12px}
+.brand-text small{margin-top:5px}
+.home .hero{display:grid;grid-template-columns:minmax(0,1.65fr) minmax(240px,.85fr);gap:36px;align-items:stretch;padding:70px 0 62px}
+.home .hero-copy{background:linear-gradient(140deg,#efede4 0%,#f1eee6 62%,#eae7de 100%);border-radius:32px;padding:clamp(28px,4vw,58px);display:flex;flex-direction:column;justify-content:center;min-width:0}
+.home .hero h1{font-size:clamp(42px,5vw,73px);margin:17px 0 22px}
+.home .eyebrow{font-size:12px;color:#435141}
+.home .hero-tags{gap:9px;margin:10px 0 16px}
+.home .hero-tag{font-size:clamp(11px,1vw,13px);border-radius:7px;padding:10px 12px}
+.home .btn{align-self:flex-start;border-radius:5px;padding:13px 25px;margin-top:18px}
+.home .portrait{width:100%;height:100%;max-width:none;max-height:none;aspect-ratio:4/4.5;object-fit:cover;object-position:center;border:3px solid #fff;border-radius:34px;box-shadow:0 20px 35px rgba(46,45,35,.20),0 4px 12px rgba(46,45,35,.08)}
+.home .feature-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;padding:0 0 24px}
+.home .feature-card{min-height:215px;border-radius:25px;padding:30px 30px 26px;display:flex;flex-direction:column;position:relative;text-decoration:none;overflow:hidden;isolation:isolate;box-shadow:0 6px 24px rgba(56,58,43,.045);transition:transform .2s ease,box-shadow .2s ease}
+.home .feature-card:hover{transform:translateY(-3px);box-shadow:0 13px 26px rgba(56,58,43,.12);opacity:1}
+.home .feature-card:after{content:'';position:absolute;right:-60px;bottom:-130px;width:250px;height:240px;border-radius:50%;background:rgba(255,255,255,.20);z-index:-1}
+.home .feature-card--about{background:linear-gradient(140deg,#efeee4,#e1e3d5)}
+.home .feature-card--therapy{background:linear-gradient(140deg,#f1e8df,#ead9cb)}
+.home .feature-card--writing{background:linear-gradient(140deg,#e9eae5,#dce0dc)}
+.home .feature-icon{width:35px;height:35px;stroke:#475543;fill:none;stroke-width:1.6}
+.home .feature-card h2{font-family:'Libre Baskerville',Georgia,serif;font-size:clamp(27px,2.5vw,36px);font-weight:400;letter-spacing:-.03em;margin:12px 0 5px;line-height:1.3}
+.home .feature-card p{font-size:14px;line-height:1.55;margin:0;max-width:240px}
+.home .feature-arrow{position:absolute;right:24px;bottom:23px;width:39px;height:39px;display:grid;place-items:center;background:rgba(255,255,255,.35);border-radius:50%;font-size:24px;font-weight:300}
+.home .social-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:20px;padding:0 0 75px}
+.home .social-card{background:linear-gradient(140deg,#ecebe2,#e3e3d8);border-radius:22px;min-height:113px;padding:24px 30px;display:flex;align-items:center;gap:20px;min-width:0}
+.home .social-card--podcast{background:linear-gradient(140deg,#f0e6df,#e8dcd2)}
+.home .social-icon{width:39px;height:39px;flex:none;stroke:#344332;fill:none;stroke-width:1.7}
+.home .social-info{min-width:0;flex:1;border-left:1px solid #a5a99e;padding-left:22px}
+.home .social-info h2{font-family:'Libre Baskerville',Georgia,serif;font-size:clamp(18px,2vw,26px);font-weight:400;line-height:1.3;margin:0 0 5px;overflow-wrap:anywhere}
+.home .social-info p{margin:0;font-size:13px;line-height:1.5}
+.home .social-card a{color:inherit;text-decoration:none}
+.home .social-card a:hover{text-decoration:underline;opacity:1}
+.home .external{font-size:23px;padding:8px}
+.home .platforms{display:flex;align-items:center;gap:9px;flex-wrap:wrap;border-left:1px solid #aaa49a;padding-left:18px}
+.home .platforms a{font-size:12px;font-weight:600;border:1px solid rgba(54,60,48,.25);border-radius:20px;padding:6px 10px;white-space:nowrap}
+.home .platforms a:focus-visible,.home a:focus-visible{outline:3px solid #556b52;outline-offset:3px}
+@media(max-width:900px){.home .hero{grid-template-columns:minmax(0,1.4fr) minmax(220px,.9fr);gap:22px}.home .feature-card{padding:25px 22px}.home .social-grid{grid-template-columns:1fr}.home .social-card{min-height:110px}}
+@media(max-width:650px){.nav .brand{gap:9px}.brand-mark{width:46px;height:33px}.home .hero{grid-template-columns:1fr;gap:20px;padding:35px 0 38px}.home .hero-copy{padding:30px 24px;border-radius:23px}.home .portrait{width:100%;height:auto;max-width:420px;aspect-ratio:1/1;justify-self:center;border-radius:24px}.home .hero h1{font-size:44px}.home .feature-grid{grid-template-columns:1fr;gap:13px}.home .feature-card{min-height:175px}.home .social-grid{gap:13px;padding-bottom:45px}.home .social-card{padding:20px 17px;gap:12px;flex-wrap:wrap}.home .social-info{padding-left:14px}.home .platforms{width:100%;border-left:0;padding-left:0;padding-top:10px}}
