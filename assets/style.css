@@ -3,3 +3,15 @@
 .hero { grid-template-columns: minmax(0, 280px) minmax(0, 1fr); justify-content: center; }
 .hero .portrait { width: 100%; max-width: 280px; height: auto; aspect-ratio: .94; object-fit: cover; }
 @media (max-width: 760px) { .hero { grid-template-columns: 1fr; } .hero .portrait { width: min(58%, 240px); max-height: none; } }
+
+/* Ana sayfa bolum basliklari */
+.section .section-primary {font-family:'Libre Baskerville',Georgia,serif;font-size:clamp(32px,3.7vw,48px);font-weight:400;line-height:1.25;letter-spacing:-.025em;margin:0 0 10px;text-transform:none;}
+.section .section-secondary {font-family:'DM Sans',Arial,sans-serif;font-size:clamp(14px,1.4vw,17px);font-weight:400;line-height:1.5;color:var(--muted);letter-spacing:0;margin:0;text-transform:none;}
+
+/* Ana sayfa bilgi kutucuklari */
+.hero-tags{display:flex;flex-wrap:wrap;gap:9px;margin:22px 0 10px;align-items:center}
+.hero-tag{display:inline-flex;align-items:center;padding:10px 13px;border-radius:3px;font-size:12px;font-weight:500;line-height:1.45;white-space:nowrap}
+.hero-tag--sage{background:#dde3d6;color:#364535}
+.hero-tag--sand{background:#e9ddcd;color:#514438}
+.hero-tag--mist{background:#e1e4de;color:#435047}
+@media(max-width:760px){.hero-tags{gap:8px;margin-top:18px}.hero-tag{font-size:11px;padding:9px 11px;white-space:normal}}
