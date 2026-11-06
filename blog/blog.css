@@ -22,3 +22,8 @@
 
 /* Makale sayfalari */
 .article-shell{max-width:940px;margin:48px auto 90px;padding:0 20px}.article-paper{background:#faf8f3;border:1px solid #e5e1d8;border-radius:25px;box-shadow:0 20px 55px rgba(47,56,45,.09);padding:clamp(24px,5vw,72px)}.article-back{display:inline-block;color:#586b50;text-decoration:none;margin-bottom:30px}.article-kicker{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#9a6c63;font-weight:700}.article-paper h1{font-family:Georgia,serif;font-weight:400;font-size:clamp(35px,5vw,65px);line-height:1.13;margin:15px 0 16px;color:#354234}.article-byline{font-size:14px;color:#65705e;margin:0 0 30px}.article-hero{display:block;width:100%;max-height:430px;object-fit:contain;background:#eeeae3;border-radius:14px;margin:28px 0 40px}.article-text{max-width:720px;margin:auto}.article-text p{font-size:clamp(17px,1.7vw,19px);line-height:1.95;color:#374138;margin:0 0 1.45em}.article-note{margin-top:45px;padding:18px 22px;border-radius:14px;background:#ecefe7;font-size:14px;color:#4a5947}.article-footer{margin-top:32px;border-top:1px solid #dddcd3;padding-top:24px;color:#5d665a;font-size:14px}@media(max-width:650px){.article-shell{margin:20px auto 50px;padding:0 12px}.article-paper{border-radius:18px}.article-hero{max-height:300px}}
+
+/* Editorial artwork credit */
+.article-artwork{margin:1.5rem auto 2rem;max-width:720px;text-align:center}
+.article-artwork .article-hero{display:block;max-width:100%;width:auto;max-height:520px;height:auto;object-fit:contain;margin:0 auto;border-radius:12px;box-shadow:0 12px 30px rgba(40,45,33,.09)}
+.article-artwork .art-credit{margin-top:.75rem;color:#73786f;font:italic .87rem/1.55 Georgia,serif}
