@@ -1,29 +1,732 @@
-/* Yalnızca Yazılar hub sayfasına uygulanır; diğer sayfaları değiştirmez. */
-.blog-hub{background:radial-gradient(ellipse at 98% 21%,rgba(218,222,208,.46),transparent 30%),#faf7f2;color:#303a30}.blog-hub .nav{width:min(1320px,calc(100% - 72px));padding:24px 0 22px}.blog-hub .brand{display:flex;align-items:center;gap:15px;font-size:23px;letter-spacing:.04em;font-weight:600}.blog-hub .brand-mark{width:75px;height:49px;padding-right:16px;border-right:1px solid #8e9988}.blog-hub .brand-text small{font-size:11px;letter-spacing:.1em;font-weight:500;margin-top:4px}.blog-hub .links{gap:30px}.blog-hub .links a{font-size:14px;font-weight:600}.blog-hub .links .active{color:#945e58;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:11px}.blog-hub .links .cta{border-radius:11px;padding:11px 22px;color:white;background:#58684d}.blog-hub main.wrap{width:min(1320px,calc(100% - 72px))}.blog-intro{padding:40px 0 16px}.blog-kicker{color:#96645d;font-size:13px;font-weight:700;letter-spacing:.2em;margin:0 0 9px}.blog-intro h1{font-family:'Libre Baskerville',Georgia,serif;font-size:clamp(52px,6vw,78px);font-weight:400;line-height:1.16;letter-spacing:-.04em;margin:0 0 6px}.blog-lead{max-width:870px;font-size:clamp(16px,1.55vw,21px);line-height:1.5;color:#535952;margin:0 0 27px}.disclaimer{display:flex;align-items:center;gap:24px;border-radius:18px;background:linear-gradient(115deg,#eae9df,#e6e5db);padding:17px 27px;min-height:66px;box-shadow:0 8px 22px rgba(45,48,38,.045);font-size:15px;line-height:1.5}.info-icon{font-size:30px;line-height:1;border-right:1px solid #9fa79a;padding-right:22px;font-weight:400}.blog-library{padding:10px 0 80px}.filters{display:flex;flex-wrap:wrap;gap:12px;margin:0 0 34px}.filters button{font:600 13px 'DM Sans',Arial,sans-serif;color:#394338;background:transparent;border:1px solid #c9cebf;border-radius:30px;padding:12px 19px;cursor:pointer;transition:background .15s,color .15s}.filters button:hover{background:#e8eadf}.filters button.selected{background:#596b4d;color:#fff;border-color:#596b4d}.post-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:30px}.post-tile{background:linear-gradient(160deg,#faf6f0,#f6f1eb);border-radius:22px;overflow:hidden;box-shadow:0 14px 25px rgba(54,51,42,.12),0 2px 6px rgba(54,51,42,.04);display:flex;flex-direction:column;min-width:0}.post-tile[hidden]{display:none}.post-cover{display:block;height:220px;overflow:hidden;position:relative;background:#ded8ca}.post-cover img{display:block;width:100%;height:100%;object-fit:cover}.cover-identity{background:radial-gradient(circle at 70% 33%,#e8c9b8 0 13%,transparent 14%),radial-gradient(circle at 33% 63%,#a87c70 0 16%,transparent 17%),linear-gradient(125deg,#c7a28c,#f1dbca 45%,#bca7a1)}.cover-art-identity{position:absolute;inset:20px;border:4px double rgba(91,61,54,.3);border-radius:48% 48% 12% 12%;font-size:160px;text-align:center;line-height:170px;color:rgba(92,61,56,.35)}.cover-uncertainty{background:linear-gradient(160deg,#d6d6ce,#eee8df 55%,#b8bcb0)}.cover-desire{background:linear-gradient(145deg,#f0dccc,#b3baa4 55%,#e9c6af);position:relative}.desire-art{position:absolute;inset:20px;border:1px solid rgba(255,255,255,.55);border-radius:120px 120px 12px 12px;background:radial-gradient(circle at 75% 80%,#a3a68d 0 12%,transparent 13%),linear-gradient(155deg,transparent 50%,#c9bca8 51% 65%,transparent 66%);opacity:.8}.post-body{padding:23px 27px 24px;display:flex;flex-direction:column;flex:1}.post-category{color:#9a665d;font-size:11px;font-weight:700;letter-spacing:.18em;margin:0 0 9px}.post-body h2{font:400 clamp(20px,2vw,26px)/1.35 'Libre Baskerville',Georgia,serif;letter-spacing:-.025em;margin:0 0 12px}.post-body h2 a{text-decoration:none}.post-body>p:not(.post-category){font-size:15px;line-height:1.6;color:#565b54;margin:0 0 30px}.post-meta{margin-top:auto;display:flex;align-items:center;justify-content:space-between;gap:8px}.author{font-family:Georgia,serif;font-size:14px;color:#344137;white-space:normal}.author em{font-style:italic}.read-arrow{width:39px;height:39px;border-radius:50%;background:#e1e2d7;display:grid;place-items:center;text-decoration:none;font-size:24px;flex:none}.soon{font-size:12px;color:#7b8177}.no-results{padding:20px 0;color:#666}.blog-hub .footer{background:transparent}
-@media(max-width:980px){.post-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.blog-hub .nav{flex-wrap:wrap}.blog-hub .links{gap:15px}}
-@media(max-width:650px){.blog-hub .nav,.blog-hub main.wrap{width:calc(100% - 36px)}.blog-hub .brand{font-size:17px}.blog-hub .brand-mark{width:57px;height:42px;padding-right:9px}.blog-hub .brand-text small{font-size:9px}.blog-hub .links{gap:12px}.blog-hub .links a{font-size:12px}.blog-intro{padding-top:30px}.blog-intro h1{font-size:50px}.disclaimer{padding:15px;gap:13px;font-size:13px}.info-icon{padding-right:13px}.post-grid{grid-template-columns:1fr;gap:24px}.post-cover{height:215px}.filters{gap:8px;margin-bottom:25px}.filters button{padding:9px 12px;font-size:12px}.blog-library{padding-bottom:45px}}
 
-/* Sanat eserleri ve tum sayfalarda ortak ust menu */
-.blog-hub .nav{width:min(1120px,calc(100% - 48px));padding:28px 0;}
-.blog-hub .brand{font-size:inherit;letter-spacing:.05em;gap:13px;font-weight:600;}
-.blog-hub .brand-mark{width:56px;height:38px;padding-right:12px;}
-.blog-hub .brand-text small{font-size:10px;letter-spacing:.17em;font-weight:400;margin-top:5px;}
-.blog-hub .links{gap:26px;}
-.blog-hub .links a{font-size:13px;font-weight:400;}
-.blog-hub .links .cta{padding:9px 17px;border-radius:2px;background:#45513f;}
-.blog-hub .post-cover{height:235px;background:#e8e2d8;}
-.blog-hub .post-cover img{display:block;width:100%;height:100%;object-fit:cover;object-position:center 45%;transition:transform .25s ease;}
-.blog-hub a.post-cover:hover img{transform:scale(1.035)}
-.blog-hub .cover-identity,.blog-hub .cover-desire,.blog-hub .cover-uncertainty{background:#e8e2d8;}
-@media(max-width:760px){.blog-hub .nav{width:calc(100% - 36px);padding:18px 0;display:block}.blog-hub .links{margin-top:18px;gap:12px 18px}.blog-hub .links a{font-size:12px}.blog-hub .brand{font-size:inherit}.blog-hub .brand-mark{width:56px;height:38px}.blog-hub .brand-text small{font-size:10px}}
+/* =========================================
+   DILARA SACAL — BLOG STYLES
+   Blog ana sayfasi, makaleler ve sanat eserleri
+   ========================================= */
 
-/* Sekiz eserin tamamini goster: makale icerikleri degistirilmez. */
-.art-gallery{padding:0 0 90px}.art-gallery-heading{max-width:780px;margin:0 0 28px}.art-gallery-heading h2{font:400 clamp(28px,3.5vw,42px)/1.25 Georgia,serif;margin:0 0 12px}.art-gallery-heading>p:last-child{color:#596056;line-height:1.65}.art-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:22px}.artwork{margin:0;padding:12px 12px 18px;background:#f7f2eb;border-radius:17px;box-shadow:0 10px 23px rgba(50,48,41,.09)}.artwork img{display:block;width:100%;height:235px;object-fit:contain;background:#ebe7df;border-radius:10px}.artwork figcaption{font:400 15px/1.5 Georgia,serif;color:#394339;margin:13px 4px 0}@media(max-width:900px){.art-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:520px){.art-grid{gap:12px}.artwork{padding:7px 7px 12px}.artwork img{height:170px}.artwork figcaption{font-size:13px}}
+/* BLOG ANA SAYFASI */
 
-/* Makale sayfalari */
-.article-shell{max-width:940px;margin:48px auto 90px;padding:0 20px}.article-paper{background:#faf8f3;border:1px solid #e5e1d8;border-radius:25px;box-shadow:0 20px 55px rgba(47,56,45,.09);padding:clamp(24px,5vw,72px)}.article-back{display:inline-block;color:#586b50;text-decoration:none;margin-bottom:30px}.article-kicker{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#9a6c63;font-weight:700}.article-paper h1{font-family:Georgia,serif;font-weight:400;font-size:clamp(35px,5vw,65px);line-height:1.13;margin:15px 0 16px;color:#354234}.article-byline{font-size:14px;color:#65705e;margin:0 0 30px}.article-hero{display:block;width:100%;max-height:430px;object-fit:contain;background:#eeeae3;border-radius:14px;margin:28px 0 40px}.article-text{max-width:720px;margin:auto}.article-text p{font-size:clamp(17px,1.7vw,19px);line-height:1.95;color:#374138;margin:0 0 1.45em}.article-note{margin-top:45px;padding:18px 22px;border-radius:14px;background:#ecefe7;font-size:14px;color:#4a5947}.article-footer{margin-top:32px;border-top:1px solid #dddcd3;padding-top:24px;color:#5d665a;font-size:14px}@media(max-width:650px){.article-shell{margin:20px auto 50px;padding:0 12px}.article-paper{border-radius:18px}.article-hero{max-height:300px}}
+.blog-hub {
+  background:
+    radial-gradient(
+      ellipse at 98% 21%,
+      rgba(218,222,208,.46),
+      transparent 30%
+    ),
+    #faf7f2;
+  color: #303a30;
+}
 
-/* Editorial artwork credit */
-.article-artwork{margin:1.5rem auto 2rem;max-width:720px;text-align:center}
-.article-artwork .article-hero{display:block;max-width:100%;width:auto;max-height:520px;height:auto;object-fit:contain;margin:0 auto;border-radius:12px;box-shadow:0 12px 30px rgba(40,45,33,.09)}
-.article-artwork .art-credit{margin-top:.75rem;color:#73786f;font:italic .87rem/1.55 Georgia,serif}
+/* UST MENU */
+
+.blog-hub .nav {
+  width: min(1120px, calc(100% - 48px));
+  padding: 28px 0;
+}
+
+.blog-hub .brand {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  font-size: inherit;
+  letter-spacing: .05em;
+  font-weight: 600;
+}
+
+.blog-hub .brand-mark {
+  width: 56px;
+  height: 38px;
+  padding-right: 12px;
+  border-right: 1px solid #8e9988;
+}
+
+.blog-hub .brand-text small {
+  font-size: 10px;
+  letter-spacing: .17em;
+  font-weight: 400;
+  margin-top: 5px;
+}
+
+.blog-hub .links {
+  gap: 26px;
+}
+
+.blog-hub .links a {
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.blog-hub .links .active {
+  color: #945e58;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 11px;
+}
+
+.blog-hub .links .cta {
+  padding: 9px 17px;
+  border-radius: 2px;
+  color: white;
+  background: #45513f;
+}
+
+/* SAYFA GENISLIGI */
+
+.blog-hub main.wrap {
+  width: min(1320px, calc(100% - 72px));
+}
+
+/* GIRIS ALANI */
+
+.blog-intro {
+  padding: 40px 0 16px;
+}
+
+.blog-kicker {
+  color: #96645d;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .2em;
+  margin: 0 0 9px;
+}
+
+.blog-intro h1 {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: clamp(52px, 6vw, 78px);
+  font-weight: 400;
+  line-height: 1.16;
+  letter-spacing: -.04em;
+  margin: 0 0 6px;
+}
+
+.blog-lead {
+  max-width: 870px;
+  font-size: clamp(16px, 1.55vw, 21px);
+  line-height: 1.5;
+  color: #535952;
+  margin: 0 0 27px;
+}
+
+/* BILGILENDIRME KUTUSU */
+
+.disclaimer {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  border-radius: 18px;
+  background: linear-gradient(
+    115deg,
+    #eae9df,
+    #e6e5db
+  );
+  padding: 17px 27px;
+  min-height: 66px;
+  box-shadow: 0 8px 22px rgba(45,48,38,.045);
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.info-icon {
+  font-size: 30px;
+  line-height: 1;
+  border-right: 1px solid #9fa79a;
+  padding-right: 22px;
+  font-weight: 400;
+  flex-shrink: 0;
+}
+
+/* YAZI ARSIVI */
+
+.blog-library {
+  padding: 10px 0 80px;
+}
+
+/* KATEGORI FILTRELERI */
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 0 0 34px;
+}
+
+.filters button {
+  font: 600 13px 'DM Sans', Arial, sans-serif;
+  color: #394338;
+  background: transparent;
+  border: 1px solid #c9cebf;
+  border-radius: 30px;
+  padding: 12px 19px;
+  cursor: pointer;
+  transition:
+    background .15s ease,
+    color .15s ease;
+}
+
+.filters button:hover {
+  background: #e8eadf;
+}
+
+.filters button.selected {
+  background: #596b4d;
+  color: #fff;
+  border-color: #596b4d;
+}
+
+.filters button:focus-visible {
+  outline: 2px solid #596b4d;
+  outline-offset: 3px;
+}
+
+/* YAZI KARTLARI */
+
+.post-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 30px;
+}
+
+.post-tile {
+  background: linear-gradient(
+    160deg,
+    #faf6f0,
+    #f6f1eb
+  );
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow:
+    0 14px 25px rgba(54,51,42,.12),
+    0 2px 6px rgba(54,51,42,.04);
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.post-tile[hidden] {
+  display: none;
+}
+
+/* KART GORSELLERI */
+
+.post-cover {
+  display: block;
+  height: 235px;
+  overflow: hidden;
+  position: relative;
+  background: #e8e2d8;
+}
+
+.post-cover img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 45%;
+  transition: transform .25s ease;
+}
+
+a.post-cover:hover img {
+  transform: scale(1.035);
+}
+
+.cover-identity,
+.cover-desire,
+.cover-uncertainty {
+  background: #e8e2d8;
+}
+
+/* KART METINLERI */
+
+.post-body {
+  padding: 23px 27px 24px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+}
+
+.post-category {
+  color: #9a665d;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .18em;
+  margin: 0 0 9px;
+}
+
+.post-body h2 {
+  font:
+    400 clamp(20px, 2vw, 26px)/1.35
+    'Libre Baskerville', Georgia, serif;
+  letter-spacing: -.025em;
+  margin: 0 0 12px;
+}
+
+.post-body h2 a {
+  text-decoration: none;
+}
+
+.post-body h2 a:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.post-body > p:not(.post-category) {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #565b54;
+  margin: 0 0 30px;
+}
+
+/* YAZAR IMZASI VE OK */
+
+.post-meta {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.post-meta .author {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  min-width: 0;
+  font-family: Georgia, serif;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #344137;
+  white-space: normal;
+}
+
+.post-meta .author em {
+  font-style: normal;
+}
+
+.author-icon {
+  display: block;
+  width: 17px;
+  height: 17px;
+  flex: 0 0 17px;
+}
+
+.read-arrow {
+  width: 39px;
+  height: 39px;
+  border-radius: 50%;
+  background: #e1e2d7;
+  display: grid;
+  place-items: center;
+  text-decoration: none;
+  font-size: 24px;
+  flex-shrink: 0;
+}
+
+.read-arrow:hover {
+  background: #d4dacb;
+}
+
+.soon {
+  font-size: 12px;
+  color: #7b8177;
+}
+
+.no-results {
+  padding: 20px 0;
+  color: #666;
+}
+
+.blog-hub .footer {
+  background: transparent;
+}
+
+/* BLOG ALT IC BAGLANTILARI */
+
+.blog-next {
+  margin: 2.8rem 0 3rem;
+}
+
+.blog-next h2 {
+  font-size: 1.2rem;
+  margin: 0 0 1rem;
+}
+
+.blog-next-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: .85rem;
+}
+
+.blog-next-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.2rem;
+  border-radius: 14px;
+  background: #e9efe8;
+  color: inherit;
+  text-decoration: none;
+  transition: background .2s ease;
+}
+
+.blog-next-link:nth-child(2) {
+  background: #f4ede4;
+}
+
+.blog-next-link:nth-child(3) {
+  background: #e8edf0;
+}
+
+.blog-next-link:hover,
+.blog-next-link:focus-visible {
+  background: #dce7da;
+}
+
+.blog-next-link:nth-child(2):hover,
+.blog-next-link:nth-child(2):focus-visible {
+  background: #eae0d3;
+}
+
+.blog-next-link:nth-child(3):hover,
+.blog-next-link:nth-child(3):focus-visible {
+  background: #dbe5ea;
+}
+
+.blog-next-text {
+  display: flex;
+  flex-direction: column;
+  gap: .3rem;
+}
+
+.blog-next-text strong {
+  font-size: 1rem;
+}
+
+.blog-next-text small {
+  font-size: .88rem;
+  font-weight: 400;
+  opacity: .8;
+}
+
+.blog-next-arrow {
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+/* SANAT ESERLERI GALERISI */
+
+.art-gallery {
+  padding: 0 0 90px;
+}
+
+.art-gallery-heading {
+  max-width: 780px;
+  margin: 0 0 28px;
+}
+
+.art-gallery-heading h2 {
+  font:
+    400 clamp(28px, 3.5vw, 42px)/1.25
+    Georgia, serif;
+  margin: 0 0 12px;
+}
+
+.art-gallery-heading > p:last-child {
+  color: #596056;
+  line-height: 1.65;
+}
+
+.art-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.artwork {
+  margin: 0;
+  padding: 12px 12px 18px;
+  background: #f7f2eb;
+  border-radius: 17px;
+  box-shadow: 0 10px 23px rgba(50,48,41,.09);
+}
+
+.artwork img {
+  display: block;
+  width: 100%;
+  height: 235px;
+  object-fit: contain;
+  background: #ebe7df;
+  border-radius: 10px;
+}
+
+.artwork figcaption {
+  font: 400 15px/1.5 Georgia, serif;
+  color: #394339;
+  margin: 13px 4px 0;
+}
+
+/* TEKIL MAKALE SAYFALARI */
+
+.article-shell {
+  max-width: 940px;
+  margin: 48px auto 90px;
+  padding: 0 20px;
+}
+
+.article-paper {
+  background: #faf8f3;
+  border: 1px solid #e5e1d8;
+  border-radius: 25px;
+  box-shadow: 0 20px 55px rgba(47,56,45,.09);
+  padding: clamp(24px, 5vw, 72px);
+}
+
+.article-back {
+  display: inline-block;
+  color: #586b50;
+  text-decoration: none;
+  margin-bottom: 30px;
+}
+
+.article-back:hover {
+  text-decoration: underline;
+}
+
+.article-kicker {
+  font-size: 12px;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: #9a6c63;
+  font-weight: 700;
+}
+
+.article-paper h1 {
+  font-family: Georgia, serif;
+  font-weight: 400;
+  font-size: clamp(35px, 5vw, 65px);
+  line-height: 1.13;
+  margin: 15px 0 16px;
+  color: #354234;
+}
+
+.article-byline {
+  font-size: 14px;
+  color: #65705e;
+  margin: 0 0 30px;
+}
+
+.article-hero {
+  display: block;
+  width: 100%;
+  max-height: 430px;
+  object-fit: contain;
+  background: #eeeae3;
+  border-radius: 14px;
+  margin: 28px 0 40px;
+}
+
+.article-text {
+  max-width: 720px;
+  margin: auto;
+}
+
+.article-text p {
+  font-size: clamp(17px, 1.7vw, 19px);
+  line-height: 1.95;
+  color: #374138;
+  margin: 0 0 1.45em;
+}
+
+.article-note {
+  margin-top: 45px;
+  padding: 18px 22px;
+  border-radius: 14px;
+  background: #ecefe7;
+  font-size: 14px;
+  color: #4a5947;
+}
+
+.article-footer {
+  margin-top: 32px;
+  border-top: 1px solid #dddcd3;
+  padding-top: 24px;
+  color: #5d665a;
+  font-size: 14px;
+}
+
+/* SANAT ESERI VE ESER ADI */
+
+.article-artwork {
+  margin: 1.5rem auto 2rem;
+  max-width: 720px;
+  text-align: center;
+}
+
+.article-artwork .article-hero {
+  display: block;
+  max-width: 100%;
+  width: auto;
+  max-height: 520px;
+  height: auto;
+  object-fit: contain;
+  margin: 0 auto;
+  border-radius: 12px;
+  box-shadow: 0 12px 30px rgba(40,45,33,.09);
+}
+
+.article-artwork .art-credit {
+  margin-top: .75rem;
+  color: #73786f;
+  font: italic .87rem/1.55 Georgia, serif;
+}
+
+/* TABLET */
+
+@media (max-width: 980px) {
+  .post-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .blog-hub .nav {
+    flex-wrap: wrap;
+  }
+
+  .blog-hub .links {
+    gap: 15px;
+  }
+}
+
+@media (max-width: 900px) {
+  .art-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* MOBIL MENU */
+
+@media (max-width: 760px) {
+  .blog-hub .nav {
+    width: calc(100% - 36px);
+    padding: 18px 0;
+    display: block;
+  }
+
+  .blog-hub .links {
+    margin-top: 18px;
+    gap: 12px 18px;
+  }
+
+  .blog-hub .links a {
+    font-size: 12px;
+  }
+
+  .blog-hub .brand {
+    font-size: inherit;
+  }
+
+  .blog-hub .brand-mark {
+    width: 56px;
+    height: 38px;
+  }
+
+  .blog-hub .brand-text small {
+    font-size: 10px;
+  }
+}
+
+/* MOBIL KARTLAR */
+
+@media (max-width: 650px) {
+  .blog-hub main.wrap {
+    width: calc(100% - 36px);
+  }
+
+  .blog-intro {
+    padding-top: 30px;
+  }
+
+  .blog-intro h1 {
+    font-size: 50px;
+  }
+
+  .disclaimer {
+    padding: 15px;
+    gap: 13px;
+    font-size: 13px;
+  }
+
+  .info-icon {
+    padding-right: 13px;
+  }
+
+  .post-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .post-cover {
+    height: 215px;
+  }
+
+  .filters {
+    gap: 8px;
+    margin-bottom: 25px;
+  }
+
+  .filters button {
+    padding: 9px 12px;
+    font-size: 12px;
+  }
+
+  .blog-library {
+    padding-bottom: 45px;
+  }
+
+  .post-meta .author {
+    font-size: 13px;
+  }
+
+  .article-shell {
+    margin: 20px auto 50px;
+    padding: 0 12px;
+  }
+
+  .article-paper {
+    border-radius: 18px;
+  }
+
+  .article-hero {
+    max-height: 300px;
+  }
+}
+
+/* KUCUK MOBIL EKRANLAR */
+
+@media (max-width: 520px) {
+  .art-grid {
+    gap: 12px;
+  }
+
+  .artwork {
+    padding: 7px 7px 12px;
+  }
+
+  .artwork img {
+    height: 170px;
+  }
+
+  .artwork figcaption {
+    font-size: 13px;
+  }
+}
+
+/* HAREKET HASSASIYETI */
+
+@media (prefers-reduced-motion: reduce) {
+  .post-cover img,
+  .blog-next-link,
+  .filters button {
+    transition: none;
+  }
+}
