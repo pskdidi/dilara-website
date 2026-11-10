@@ -112,8 +112,8 @@
 
 .about-next-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1rem;
+  grid-template-columns: 1fr;
+  gap: 0.85rem;
 }
 
 .about-next-link {
@@ -135,6 +135,10 @@
   background: #f4ede4;
 }
 
+.about-next-link:nth-child(3) {
+  background: #e8edf0;
+}
+
 .about-next-link:hover,
 .about-next-link:focus-visible {
   background: #dce7da;
@@ -145,14 +149,18 @@
   background: #eae0d3;
 }
 
+.about-next-link:nth-child(3):hover,
+.about-next-link:nth-child(3):focus-visible {
+  background: #dbe5ea;
+}
+
 .about-next-arrow {
   font-size: 1.2rem;
   flex-shrink: 0;
 }
 
 @media (max-width: 600px) {
-  .education-grid,
-  .about-next-grid {
+  .education-grid {
     grid-template-columns: 1fr;
   }
 }
@@ -205,7 +213,7 @@ DİLARA SAÇAL
 <div class="education-card education-card--bau">
 <svg class="education-icon" viewBox="0 0 40 40" aria-hidden="true">
 <path d="M3 14 20 6l17 8-17 8L3 14Z"/>
-<path d="M10 18v10c6 5 14 5 20 0V18"/>
+<path d="M10 18v10c6 5 14 0 20 0V18"/>
 <path d="M37 14v13"/>
 </svg>
 <h3>Bahçeşehir Üniversitesi</h3>
@@ -239,6 +247,11 @@ DİLARA SAÇAL
 
 <a class="about-next-link" href="/randevu.html">
 <span>Online Görüşme ve Randevu</span>
+<span class="about-next-arrow" aria-hidden="true">→</span>
+</a>
+
+<a class="about-next-link" href="/blog/">
+<span>Psikoloji ve Psikanaliz Üzerine Yazılarım</span>
 <span class="about-next-arrow" aria-hidden="true">→</span>
 </a>
 
