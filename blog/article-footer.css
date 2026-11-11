@@ -97,3 +97,18 @@
     height: 130px;
   }
 }
+
+/* Ortak randevu butonu */
+.shared-article-footer .shared-appointment a,
+.article-shell .shared-article-footer .shared-appointment a,
+.article-layout .shared-article-footer .shared-appointment a {
+  display: inline-block;
+  background-color: #344638;
+  color: #ffffff !important;
+  text-decoration: none;
+}
+
+.shared-article-footer .shared-appointment a:hover {
+  background-color: #26382b;
+  color: #ffffff !important;
+}
