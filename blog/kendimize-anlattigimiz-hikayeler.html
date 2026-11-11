@@ -12,6 +12,7 @@
 
 <link rel="stylesheet" href="/assets/style.css">
 <link rel="stylesheet" href="/blog/blog.css">
+<link rel="stylesheet" href="/blog/article-footer.css">
 
 <script type="application/ld+json">
 {
@@ -60,78 +61,9 @@
   color: #73786f;
 }
 
-.reading-page .article-author {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin: 1.8rem 0;
-  font-family: Georgia,serif;
-  font-size: 14px;
-  color: #586b50;
-}
-
-.reading-page .article-author svg {
-  width: 18px;
-  height: 18px;
-  flex-shrink: 0;
-}
-
-.reading-page .article-next {
-  margin-top: 2.5rem;
-  padding-top: 1.5rem;
-  border-top: 1px solid #dddcd3;
-}
-
-.reading-page .article-next h2 {
-  font-size: 1.2rem;
-  margin-bottom: 1rem;
-}
-
-.reading-page .article-next-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: .85rem;
-}
-
-.reading-page .article-next-link {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  padding: 1.2rem;
-  border-radius: 14px;
-  color: inherit;
-  text-decoration: none;
-  background: #e9efe8;
-}
-
-.reading-page .article-next-link:nth-child(2) {
-  background: #f4ede4;
-}
-
-.reading-page .article-next-link:nth-child(3) {
-  background: #e8edf0;
-}
-
-.reading-page .article-next-link:hover,
-.reading-page .article-next-link:focus-visible {
-  filter: brightness(.96);
-}
-
-.reading-page .article-next-link span:first-child {
-  display: flex;
-  flex-direction: column;
-  gap: .3rem;
-}
-
-.reading-page .article-next-link small {
-  font-size: .88rem;
-  opacity: .8;
-}
-
 @media(max-width:600px) {
-  .reading-page .article-next-link {
-    padding: 1rem;
+  .reading-page .article-image {
+    margin-top: 1.5rem;
   }
 }
 </style>
@@ -139,11 +71,22 @@
 
 <body>
 
-<header class="wrap nav site-header"><a class="brand" href="/" aria-label="Dilara Saçal ana sayfa"><img class="brand-mark" src="/assets/divan-logo.svg" alt="" width="44" height="38"><span class="brand-text">DİLARA SAÇAL<small>KLİNİK PSİKOLOG, PSİKOTERAPİST</small></span></a><nav class="links" aria-label="Ana menü"><a href="/">Ana Sayfa</a>
-<a href="/hakkimda">Hakkımda</a>
-<a href="/psikoterapi">Psikoterapi</a>
-<a href="/blog/" class="active" aria-current="page">Yazılar</a>
-<a href="/randevu" class="cta">Randevu</a></nav></header>
+<header class="wrap nav site-header">
+  <a class="brand" href="/" aria-label="Dilara Saçal ana sayfa">
+    <img class="brand-mark" src="/assets/divan-logo.svg" alt="" width="44" height="38">
+    <span class="brand-text">
+      DİLARA SAÇAL
+      <small>KLİNİK PSİKOLOG, PSİKOTERAPİST</small>
+    </span>
+  </a>
+  <nav class="links" aria-label="Ana menü">
+    <a href="/">Ana Sayfa</a>
+    <a href="/hakkimda">Hakkımda</a>
+    <a href="/psikoterapi">Psikoterapi</a>
+    <a href="/blog/" class="active" aria-current="page">Yazılar</a>
+    <a href="/randevu" class="cta">Randevu</a>
+  </nav>
+</header>
 
 <main class="wrap interior">
 <article class="page elevated-page reading-page">
@@ -181,58 +124,44 @@
 
 <p class="note">Kuramsal okuma: Sigmund Freud, “Screen Memories” (1899).</p>
 
-<div class="article-author">
-<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-<circle cx="12" cy="8" r="4"></circle>
-<path d="M4.5 21v-2a7.5 7.5 0 0 1 15 0v2"></path>
-</svg>
-<span>Klinik Psikolog Dilara Saçal</span>
+<!-- ORTAK YAZI SONU -->
+<div id="shared-article-footer">
+  <section class="shared-article-footer">
+    <p class="shared-article-author">Klinik Psikolog Dilara Saçal</p>
+
+    <div class="shared-appointment">
+      <h2>Online Psikoterapi ve Randevu</h2>
+      <p>Yetişkinlerle psikanalitik yönelimli online bireysel psikoterapi görüşmeleri gerçekleştiriyorum. Görüşme süreci ve randevu hakkında bilgi alabilirsiniz.</p>
+      <a href="/randevu">Randevu ve İletişim →</a>
+    </div>
+
+    <div class="shared-related">
+      <h2>Diğer Yazılar</h2>
+      <div class="shared-related-grid">
+        <a class="shared-related-card" href="/blog/savunma-mekanizmalari-bizi-neden-korur">
+          <img src="/blog/images/savunmalar.webp" alt="" loading="lazy">
+          <strong>Savunma Mekanizmaları Bizi Neden Korur?</strong>
+        </a>
+        <a class="shared-related-card" href="/blog/belirsizlikle-yasayabilmek">
+          <img src="/blog/images/belirsizlik.webp" alt="" loading="lazy">
+          <strong>Belirsizlikle Yaşayabilmek</strong>
+        </a>
+      </div>
+      <a class="shared-all-posts" href="/blog/">Tüm Yazıları Gör →</a>
+    </div>
+  </section>
 </div>
-
-<p>
-<a class="textlink" href="/blog/">← Tüm yazılara dön</a>
-</p>
-
-<section class="article-next" aria-labelledby="article-next-title">
-<h2 id="article-next-title">Daha Fazla Bilgi</h2>
-
-<div class="article-next-grid">
-
-<a class="article-next-link" href="/hakkimda">
-<span>
-<strong>Hakkımda</strong>
-<small>Eğitimim ve klinik çalışmalarım</small>
-</span>
-<span aria-hidden="true">→</span>
-</a>
-
-<a class="article-next-link" href="/psikoterapi">
-<span>
-<strong>Psikoterapi Yaklaşımım</strong>
-<small>Psikanalitik psikoterapi ve çalışma süreci</small>
-</span>
-<span aria-hidden="true">→</span>
-</a>
-
-<a class="article-next-link" href="/randevu">
-<span>
-<strong>Online Görüşme ve Randevu</strong>
-<small>Görüşme süreci ve iletişim bilgileri</small>
-</span>
-<span aria-hidden="true">→</span>
-</a>
-
-</div>
-</section>
 
 </article>
 </main>
 
 <footer class="footer">
-<div class="wrap">
-© Dilara Saçal · Klinik Psikolog, Psikoterapist
-</div>
+  <div class="wrap">
+    © Dilara Saçal · Klinik Psikolog, Psikoterapist
+  </div>
 </footer>
+
+<script src="/blog/article-footer.js" defer></script>
 
 </body>
 </html>
