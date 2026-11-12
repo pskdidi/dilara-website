@@ -22,22 +22,9 @@
 <meta name="twitter:card" content="summary">
 
 <style>
-.hero-intro {
-  max-width: 520px;
-  margin: 22px 0;
-  line-height: 1.8;
-  font-size: 1rem;
-}
+/* Siyah-beyaz portre */
 .hero .portrait {
   filter: grayscale(100%) contrast(95%) brightness(105%);
-}
-.hero-service-heading {
-  max-width: 520px;
-  margin: 17px 0 0;
-  font-size: clamp(1.05rem, 1.6vw, 1.3rem);
-  line-height: 1.5;
-  font-weight: 500;
-  color: #374537;
 }
 
 @media (min-width: 769px) {
@@ -48,6 +35,7 @@
   }
 }
 
+/* Eğitim kartları */
 .education-heading {
   margin: 1px 0 9px;
   font-size: 10px;
@@ -94,7 +82,62 @@
   font-size: 11px;
 }
 
-.hero-intro a,
+/* Online psikoterapi tanıtımı */
+.home-introduction {
+  display: grid;
+  grid-template-columns: 76px minmax(0, 1fr);
+  align-items: start;
+  gap: 1.5rem;
+  max-width: 850px;
+  margin: 2.5rem auto 1.5rem;
+  padding: 2rem 2.2rem;
+  border: 1px solid #dfe7dc;
+  border-radius: 18px;
+  background: #eaf0e8;
+  color: #374537;
+}
+
+.home-introduction-icon {
+  display: grid;
+  place-items: center;
+  width: 66px;
+  height: 66px;
+  border-radius: 16px;
+  background: #dce7d9;
+}
+
+.home-introduction-icon svg {
+  width: 38px;
+  height: 38px;
+}
+
+.home-introduction-kicker {
+  margin: 0 0 .55rem;
+  font-size: .72rem;
+  font-weight: 600;
+  letter-spacing: .12em;
+}
+
+.home-introduction h2 {
+  margin: 0 0 .8rem;
+  font-size: clamp(1.3rem, 2.2vw, 1.65rem);
+  line-height: 1.4;
+}
+
+.home-introduction-copy > p:not(.home-introduction-kicker) {
+  margin: 0 0 1rem;
+  line-height: 1.85;
+}
+
+.home-introduction-link {
+  display: inline-block;
+  color: #374537;
+  font-weight: 600;
+  text-underline-offset: 4px;
+  line-height: 1.6;
+}
+
+/* Psikoterapi SEO içerikleri */
 .home-seo-content a {
   color: #374537;
   text-underline-offset: 3px;
@@ -102,7 +145,7 @@
 
 .home-seo-content {
   max-width: 850px;
-  margin: 2.5rem auto 3rem;
+  margin: 1.5rem auto 3rem;
   padding: 1.8rem 2rem;
   background: #f3f0e9;
   border: 1px solid #e3dfd4;
@@ -125,10 +168,126 @@
   margin-bottom: 0;
 }
 
+/* Instagram ve podcast alanları */
+.home-social-section {
+  margin: 2.5rem 0;
+}
+
+.home-social-section h2 {
+  margin: 0 0 .5rem;
+  color: #374537;
+}
+
+.home-social-section > p {
+  color: #687467;
+  margin: 0 0 1.5rem;
+}
+
+.instagram-mini-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 18px;
+  max-width: 520px;
+}
+
+.instagram-mini-grid a {
+  display: block;
+  min-width: 0;
+  overflow: hidden;
+  border-radius: 10px;
+  background: #eeeae2;
+  border: 1px solid #e2dfd6;
+  transition: transform .2s ease;
+}
+
+.instagram-mini-grid a:hover {
+  transform: translateY(-3px);
+}
+
+.instagram-mini-grid img {
+  display: block;
+  width: 100%;
+  height: 170px;
+  object-fit: contain;
+  background: #eeeae2;
+}
+
+.podcast-episodes {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin: 1.5rem 0 2.5rem;
+}
+
+.podcast-episode {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 22px;
+  background: #f3f0e9;
+  border: 1px solid #e3dfd4;
+  border-radius: 16px;
+}
+
+.podcast-episode-number {
+  display: block;
+  margin-bottom: 10px;
+  font-size: .75rem;
+  letter-spacing: .12em;
+  color: #687467;
+}
+
+.podcast-episode h3 {
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.5;
+  color: #374537;
+}
+
+.podcast-episode a {
+  color: #374537;
+  font-weight: 600;
+  text-underline-offset: 4px;
+}
+
+/* Mobil görünüm */
+@media (max-width: 768px) {
+  .podcast-episodes {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (max-width: 600px) {
+  .home-introduction {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1.5rem 1.2rem;
+    margin: 2rem auto 1rem;
+  }
+
+  .home-introduction-icon {
+    width: 54px;
+    height: 54px;
+  }
+
+  .home-introduction-icon svg {
+    width: 32px;
+    height: 32px;
+  }
+
   .home-seo-content {
     padding: 1.4rem 1.2rem;
-    margin: 2rem auto;
+    margin: 1rem auto 2rem;
+  }
+
+  .instagram-mini-grid {
+    gap: 7px;
+  }
+
+  .instagram-mini-grid img {
+    height: 125px;
   }
 }
 
@@ -137,31 +296,6 @@
     grid-template-columns: 1fr;
   }
 }
-
-/* Instagram ve podcast vitrinleri */
-.content-showcase { margin: 3rem auto; }
-.showcase-heading { display:flex; justify-content:space-between; align-items:end; gap:1rem; margin-bottom:1.25rem; }
-.showcase-heading h2 { color:#374537; margin:0 0 .3rem; font-size:clamp(1.35rem,2.5vw,1.8rem); }
-.showcase-heading p { margin:0; line-height:1.6; color:#596459; }
-.showcase-heading > a { color:#374537; font-weight:600; text-underline-offset:4px; white-space:nowrap; }
-.showcase-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:1rem; }
-.showcase-card { display:flex; flex-direction:column; overflow:hidden; border:1px solid #e3dfd4; border-radius:16px; background:#faf8f3; color:#374537; text-decoration:none; transition:transform .2s ease, box-shadow .2s ease; }
-.showcase-card:hover { transform:translateY(-3px); box-shadow:0 10px 25px rgba(35,45,35,.08); }
-.showcase-card:focus-visible { outline:3px solid #738b72; outline-offset:3px; }
-.showcase-card img { display:block; width:100%; aspect-ratio:4/5; object-fit:cover; }
-.showcase-card-body { display:flex; flex:1; flex-direction:column; gap:.5rem; padding:1rem; }
-.showcase-card-body h3 { margin:0; font-size:1.02rem; line-height:1.4; }
-.showcase-card-body p { margin:0; line-height:1.6; color:#596459; font-size:.92rem; }
-.showcase-card-link { margin-top:auto; padding-top:.4rem; font-weight:600; font-size:.88rem; }
-.podcast-grid .showcase-card { padding:1.25rem; background:#f0f2ec; }
-.podcast-number { display:inline-grid; place-items:center; width:48px; height:48px; margin-bottom:1.1rem; border-radius:13px; background:#dce7d9; color:#374537; font-size:1.05rem; font-weight:700; }
-.podcast-grid .showcase-card-body { padding:0; }
-.podcast-grid .showcase-card-body h3 { font-size:1.08rem; }
-@media (max-width:700px) {
-  .showcase-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
-  .showcase-heading { align-items:start; flex-direction:column; }
-}
-@media (max-width:480px) { .showcase-grid { grid-template-columns:1fr; } }
 </style>
 
 <script type="application/ld+json">
@@ -274,222 +408,310 @@
 
 <main class="wrap home">
 
-<section class="hero" aria-label="Tanıtım">
+  <!-- ÜST TANITIM -->
+  <section class="hero" aria-label="Tanıtım">
 
-  <div class="hero-copy">
-
-    <div class="eyebrow">Klinik Psikolog, Psikoterapist</div>
-
-    <h1>Dilara Saçal</h1>
-
-    <div class="education-heading">Akademik Eğitim</div>
-
-    <div class="education-cards" aria-label="Akademik eğitim">
-      <div class="education-card">
-        <strong>Boğaziçi Üniversitesi</strong>
-        <span>Psikoloji · Lisans</span>
+    <div class="hero-copy">
+      <div class="eyebrow">
+        Klinik Psikolog, Psikoterapist
       </div>
 
-      <div class="education-card">
-        <strong>Bahçeşehir Üniversitesi</strong>
-        <span>Klinik Psikoloji · Yüksek Lisans</span>
+      <h1>Dilara Saçal</h1>
+
+      <div class="education-heading">Akademik Eğitim</div>
+
+      <div class="education-cards" aria-label="Akademik eğitim">
+        <div class="education-card">
+          <strong>Boğaziçi Üniversitesi</strong>
+          <span>Psikoloji · Lisans</span>
+        </div>
+
+        <div class="education-card">
+          <strong>Bahçeşehir Üniversitesi</strong>
+          <span>Klinik Psikoloji · Yüksek Lisans</span>
+        </div>
       </div>
+
+      <div class="hero-tags" aria-label="Çalışma alanları">
+        <span class="hero-tag hero-tag--sage">
+          Yetişkin Psikoterapisi
+        </span>
+        <span class="hero-tag hero-tag--sand">
+          Psikanalitik Psikoterapi
+        </span>
+        <span class="hero-tag hero-tag--mist">
+          Online Görüşme
+        </span>
+      </div>
+
+      <a class="btn" href="/randevu">
+        Randevu ve İletişim
+      </a>
     </div>
 
-    <div class="hero-tags" aria-label="Çalışma alanları">
-      <span class="hero-tag hero-tag--sage">Yetişkin Psikoterapisi</span>
-      <span class="hero-tag hero-tag--sand">Psikanalitik Psikoterapi</span>
-      <span class="hero-tag hero-tag--mist">Online Görüşme</span>
+    <img
+      class="portrait"
+      src="/assets/portre.jpg"
+      alt="Klinik Psikolog, Psikoterapist Dilara Saçal"
+      width="780"
+      height="792"
+      fetchpriority="high"
+      decoding="async"
+    >
+
+  </section>
+
+  <!-- YÖNLENDİRME KARTLARI -->
+  <section class="feature-grid" aria-label="Site bölümleri">
+
+    <a class="feature-card feature-card--about" href="/hakkimda">
+      <svg class="feature-icon" viewBox="0 0 40 40" aria-hidden="true">
+        <path d="M20 33c-6-4-11-5-17-4V8c7-1 12 1 17 5 5-4 10-6 17-5v21c-6-1-11 0-17 4Zm0-20v20"/>
+      </svg>
+      <h2>Hakkımda</h2>
+      <p>Eğitimim, çalışma alanlarım ve yaklaşımım.</p>
+      <span class="feature-arrow" aria-hidden="true">→</span>
+    </a>
+
+    <a class="feature-card feature-card--therapy" href="/psikoterapi">
+      <svg class="feature-icon" viewBox="0 0 40 40" aria-hidden="true">
+        <path d="M5 26v-8c0-5 5-6 8-2l6 8h14c3 0 4 2 4 5v4H8v-4H5Zm3 7v3m25-3v3"/>
+      </svg>
+      <h2>Psikoterapi</h2>
+      <p>Psikanalitik psikoterapiye dair bir çerçeve.</p>
+      <span class="feature-arrow" aria-hidden="true">→</span>
+    </a>
+
+    <a class="feature-card feature-card--writing" href="/blog/">
+      <svg class="feature-icon" viewBox="0 0 40 40" aria-hidden="true">
+        <path d="m4 14 16-9 16 9-16 9-16-9Zm0 7 16 9 16-9M4 28l16 9 16-9"/>
+      </svg>
+      <h2>Yazılar</h2>
+      <p>Ruhsallık, ilişkiler ve gündelik deneyimler üzerine.</p>
+      <span class="feature-arrow" aria-hidden="true">→</span>
+    </a>
+
+  </section>
+
+  <!-- ONLINE PSİKOTERAPİ AÇIKLAMASI -->
+  <section class="home-introduction" aria-labelledby="online-therapy-heading">
+
+    <div class="home-introduction-icon" aria-hidden="true">
+      <svg
+        viewBox="0 0 48 48"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="M9 12h30a5 5 0 0 1 5 5v16a5 5 0 0 1-5 5H22l-10 7v-7H9a5 5 0 0 1-5-5V17a5 5 0 0 1 5-5Z"/>
+        <path d="M14 22h20M14 28h14"/>
+      </svg>
     </div>
 
-    <h2 class="hero-service-heading">
-      Yetişkinlere Yönelik Online Psikoterapi
+    <div class="home-introduction-copy">
+      <p class="home-introduction-kicker">
+        PSİKOTERAPİ · ONLINE GÖRÜŞME
+      </p>
+
+      <h2 id="online-therapy-heading">
+        Yetişkinlere Yönelik Online Psikoterapi
+      </h2>
+
+      <p>
+        Psikoterapi, kişinin yaşadığı güçlükleri, ilişkilerini ve tekrar eden deneyimlerini kendi yaşam öyküsü içinde ele alabileceği bir çalışma alanı sunar. Klinik psikolog ve psikoterapist olarak yetişkinlerle psikanalitik yönelimli bireysel psikoterapi görüşmelerimi çevrim içi olarak gerçekleştiriyorum.
+      </p>
+
+      <a href="/psikoterapi" class="home-introduction-link">
+        Psikanalitik psikoterapi yaklaşımı ve görüşme süreci →
+      </a>
+    </div>
+
+  </section>
+
+  <!-- PSİKOTERAPİ VE SEO İÇERİĞİ -->
+  <section class="home-seo-content" aria-labelledby="home-therapy-title">
+
+    <h2 id="home-therapy-title">
+      Online Bireysel Psikoterapi ve Psikanalitik Yaklaşım
     </h2>
 
-    <p class="hero-intro">
-      Psikoterapi, kişinin yaşadığı güçlükleri, ilişkilerini ve tekrar eden deneyimlerini kendi yaşam öyküsü içinde ele alabileceği bir çalışma alanı sunar. Klinik psikolog ve psikoterapist olarak yetişkinlerle psikanalitik yönelimli bireysel psikoterapi görüşmelerimi çevrim içi olarak gerçekleştiriyorum.
-      <a href="/psikoterapi">Psikanalitik psikoterapi yaklaşımı ve görüşme süreci</a> hakkında daha fazla bilgi edinebilirsiniz.
+    <p>
+      Psikanalitik psikoterapi, kişinin duygularını, ilişkilerini, arzularını ve tekrar eden deneyimlerini bilinçdışı süreçlerle ilişkileri içinde anlamaya yönelen bir çalışma biçimidir. Her kişinin başvuru nedeni ve yaşam öyküsü kendine özgüdür; psikoterapi süreci de bu özgünlük içinde şekillenir.
     </p>
 
-    <a class="btn" href="/randevu">Randevu ve İletişim</a>
+    <p>
+      Görüşmelerimi yetişkinlerle online olarak gerçekleştiriyorum. Psikoterapinin çalışma biçimi, görüşmelerin çerçevesi ve ele alınabilecek konular hakkında bilgi almak için
+      <a href="/psikoterapi">psikoterapi sayfasını</a>
+      inceleyebilirsiniz.
+    </p>
 
-  </div>
+    <p>
+      Psikoterapiye başvurmayı düşünüyorsanız
+      <a href="/blog/psikoterapiye-ne-zaman-basvurmali">Psikoterapiye Ne Zaman Başvurmalı?</a>
+      ve
+      <a href="/blog/online-psikoterapi-nasil-yapilir">Online Psikoterapi Nasıl Yapılır?</a>
+      başlıklı yazılarıma da göz atabilirsiniz.
+    </p>
 
-  <img
-    class="portrait"
-    src="/assets/portre.jpg"
-    alt="Klinik Psikolog, Psikoterapist Dilara Saçal"
-    width="780"
-    height="792"
-    fetchpriority="high"
-    decoding="async"
-  >
+  </section>
 
-</section>
+  <!-- FREUDYEN HÂLLER PODCAST BÖLÜMLERİ -->
+  <section class="home-social-section" aria-labelledby="podcast-heading">
 
-<section class="feature-grid" aria-label="Site bölümleri">
+    <h2 id="podcast-heading">Freudyen Hâller</h2>
+    <p>Podcast'ten son bölümler.</p>
 
-  <a class="feature-card feature-card--about" href="/hakkimda">
-    <svg class="feature-icon" viewBox="0 0 40 40" aria-hidden="true">
-      <path d="M20 33c-6-4-11-5-17-4V8c7-1 12 1 17 5 5-4 10-6 17-5v21c-6-1-11 0-17 4Zm0-20v20"/>
-    </svg>
-    <h2>Hakkımda</h2>
-    <p>Eğitimim, çalışma alanlarım ve yaklaşımım.</p>
-    <span class="feature-arrow" aria-hidden="true">→</span>
-  </a>
+    <div class="podcast-episodes">
 
-  <a class="feature-card feature-card--therapy" href="/psikoterapi">
-    <svg class="feature-icon" viewBox="0 0 40 40" aria-hidden="true">
-      <path d="M5 26v-8c0-5 5-6 8-2l6 8h14c3 0 4 2 4 5v4H8v-4H5Zm3 7v3m25-3v3"/>
-    </svg>
-    <h2>Psikoterapi</h2>
-    <p>Psikanalitik psikoterapiye dair bir çerçeve.</p>
-    <span class="feature-arrow" aria-hidden="true">→</span>
-  </a>
-
-  <a class="feature-card feature-card--writing" href="/blog/">
-    <svg class="feature-icon" viewBox="0 0 40 40" aria-hidden="true">
-      <path d="m4 14 16-9 16 9-16 9-16-9Zm0 7 16 9 16-9M4 28l16 9 16-9"/>
-    </svg>
-    <h2>Yazılar</h2>
-    <p>Ruhsallık, ilişkiler ve gündelik deneyimler üzerine.</p>
-    <span class="feature-arrow" aria-hidden="true">→</span>
-  </a>
-
-</section>
-
-<section class="home-seo-content" aria-labelledby="home-therapy-title">
-  <h2 id="home-therapy-title">
-    Online Bireysel Psikoterapi ve Psikanalitik Yaklaşım
-  </h2>
-
-  <p>
-    Psikanalitik psikoterapi, kişinin duygularını, ilişkilerini, arzularını ve tekrar eden deneyimlerini bilinçdışı süreçlerle ilişkileri içinde anlamaya yönelen bir çalışma biçimidir. Her kişinin başvuru nedeni ve yaşam öyküsü kendine özgüdür; psikoterapi süreci de bu özgünlük içinde şekillenir.
-  </p>
-
-  <p>
-    Görüşmelerimi yetişkinlerle online olarak gerçekleştiriyorum. Psikoterapinin çalışma biçimi, görüşmelerin çerçevesi ve ele alınabilecek konular hakkında bilgi almak için
-    <a href="/psikoterapi">psikoterapi sayfasını</a> inceleyebilirsiniz.
-  </p>
-
-  <p>
-    Psikoterapiye başvurmayı düşünüyorsanız
-    <a href="/blog/psikoterapiye-ne-zaman-basvurmali">Psikoterapiye Ne Zaman Başvurmalı?</a>
-    ve
-    <a href="/blog/online-psikoterapi-nasil-yapilir">Online Psikoterapi Nasıl Yapılır?</a>
-    başlıklı yazılarıma da göz atabilirsiniz.
-  </p>
-</section>
-
-
-<!-- INSTAGRAM PAYLAŞIMLARI -->
-<section class="content-showcase" aria-labelledby="instagram-heading">
-  <div class="showcase-heading">
-    <div>
-      <h2 id="instagram-heading">Instagram'dan</h2>
-      <p>Psikoterapiye ve çalışma yaklaşımıma dair paylaşımlar.</p>
-    </div>
-    <a href="https://www.instagram.com/psikolog.dilarasacal/" target="_blank" rel="noopener noreferrer">Tüm paylaşımlar →</a>
-  </div>
-  <div class="showcase-grid">
-    <a class="showcase-card" href="https://www.instagram.com/p/DfmgQwlCDeV/" target="_blank" rel="noopener noreferrer" aria-label="Dilara Saçal tanıtım paylaşımını Instagram'da görüntüle">
-      <img src="/assets/instagram-hakkimda.webp" alt="Dilara Saçal, eğitim ve iletişim bilgileri paylaşımı" loading="lazy" width="710" height="888">
-      <div class="showcase-card-body"><h3>Tanışalım: Dilara Saçal</h3><p>Eğitimim ve görüşme bilgileri.</p><span class="showcase-card-link">Instagram'da görüntüle →</span></div>
-    </a>
-    <a class="showcase-card" href="https://www.instagram.com/p/DfkQjkuiPQ0/" target="_blank" rel="noopener noreferrer" aria-label="Psikanalitik Psikoterapi Nedir paylaşımını Instagram'da görüntüle">
-      <img src="/assets/instagram-psikanalitik-psikoterapi.webp" alt="Psikanalitik Psikoterapi Nedir başlıklı paylaşım kapağı" loading="lazy" width="710" height="888">
-      <div class="showcase-card-body"><h3>Psikanalitik Psikoterapi Nedir?</h3><p>Psikanalitik yaklaşımın temel çerçevesi.</p><span class="showcase-card-link">Instagram'da görüntüle →</span></div>
-    </a>
-    <a class="showcase-card" href="https://www.instagram.com/p/Dfemx4QCKiq/" target="_blank" rel="noopener noreferrer" aria-label="Psikoterapi Süreci Nasıl İlerler paylaşımını Instagram'da görüntüle">
-      <img src="/assets/instagram-psikoterapi-sureci.webp" alt="Psikoterapi Süreci Nasıl İlerler başlıklı paylaşım kapağı" loading="lazy" width="710" height="888">
-      <div class="showcase-card-body"><h3>Psikoterapi Süreci Nasıl İlerler?</h3><p>Görüşmelerin gündemi ve sürecin işleyişi.</p><span class="showcase-card-link">Instagram'da görüntüle →</span></div>
-    </a>
-  </div>
-</section>
-
-<!-- FREUDYEN HÂLLER PODCAST -->
-<section class="content-showcase" aria-labelledby="podcast-heading">
-  <div class="showcase-heading">
-    <div>
-      <h2 id="podcast-heading">Freudyen Hâller</h2>
-      <p>Psikanalizden gündelik hayata uzanan kısa podcast bölümleri.</p>
-    </div>
-    <a href="https://open.spotify.com/show/0ZavSHQJgKE1FKTwuaeY1N" target="_blank" rel="noopener noreferrer">Tüm bölümler →</a>
-  </div>
-  <div class="showcase-grid podcast-grid">
-    <a class="showcase-card" href="https://open.spotify.com/episode/0Z6v20TDnfLX5x4JZ8n9YW" target="_blank" rel="noopener noreferrer" aria-label="04 Şaka Yaptım Diyerek Söylediklerimiz bölümünü Spotify'da dinle">
-      <span class="podcast-number" aria-hidden="true">04</span>
-      <div class="showcase-card-body"><h3>“Şaka Yaptım” Diyerek Söylediklerimiz</h3><p>Bir şakanın içinde saklı kalabilen sözler.</p><span class="showcase-card-link">Spotify'da dinle →</span></div>
-    </a>
-    <a class="showcase-card" href="https://open.spotify.com/episode/0ivzrcS9UXzXoslvG24B8S" target="_blank" rel="noopener noreferrer" aria-label="03 Bizi Yaralayan Şeye Neden Tekrar Dönüyoruz bölümünü Spotify'da dinle">
-      <span class="podcast-number" aria-hidden="true">03</span>
-      <div class="showcase-card-body"><h3>Bizi Yaralayan Şeye Neden Tekrar Dönüyoruz?</h3><p>Tekrar eden deneyimlerin ruhsal izleri.</p><span class="showcase-card-link">Spotify'da dinle →</span></div>
-    </a>
-    <a class="showcase-card" href="https://open.spotify.com/episode/5KJd9x8yHrBTqOKkCdjIvu" target="_blank" rel="noopener noreferrer" aria-label="02 İstediğini Elde Edince Huzursuz Olmak bölümünü Spotify'da dinle">
-      <span class="podcast-number" aria-hidden="true">02</span>
-      <div class="showcase-card-body"><h3>İstediğini Elde Edince Huzursuz Olmak</h3><p>Arzunun gerçekleşmesinin ardından gelen huzursuzluk.</p><span class="showcase-card-link">Spotify'da dinle →</span></div>
-    </a>
-  </div>
-</section>
-
-<section class="social-grid" aria-label="Sosyal medya ve podcast">
-
-  <div class="social-card">
-    <svg class="social-icon" viewBox="0 0 40 40" aria-hidden="true">
-      <rect x="5" y="5" width="30" height="30" rx="9"/>
-      <circle cx="20" cy="20" r="7"/>
-      <circle cx="29" cy="11" r="1.5" fill="currentColor" stroke="none"/>
-    </svg>
-
-    <div class="social-info">
-      <h2>
+      <article class="podcast-episode">
+        <div>
+          <span class="podcast-episode-number">BÖLÜM 04</span>
+          <h3>“Şaka Yaptım” Diyerek Söylediklerimiz</h3>
+        </div>
         <a
-          href="https://www.instagram.com/psikolog.dilarasacal/"
+          href="https://open.spotify.com/episode/0Z6v20TDnfLX5x4JZ8n9YW"
           target="_blank"
           rel="noopener noreferrer"
-        >
-          @psikolog.dilarasacal
-        </a>
-      </h2>
-      <p>Psikoloji ve psikanaliz üzerine içerikler.</p>
+        >Spotify'da dinle →</a>
+      </article>
+
+      <article class="podcast-episode">
+        <div>
+          <span class="podcast-episode-number">BÖLÜM 03</span>
+          <h3>Bizi Yaralayan Şeye Neden Tekrar Dönüyoruz?</h3>
+        </div>
+        <a
+          href="https://open.spotify.com/episode/0ivzrcS9UXzXoslvG24B8S"
+          target="_blank"
+          rel="noopener noreferrer"
+        >Spotify'da dinle →</a>
+      </article>
+
+      <article class="podcast-episode">
+        <div>
+          <span class="podcast-episode-number">BÖLÜM 02</span>
+          <h3>İstediğini Elde Edince Huzursuz Olmak</h3>
+        </div>
+        <a
+          href="https://open.spotify.com/episode/5KJd9x8yHrBTqOKkCdjIvu"
+          target="_blank"
+          rel="noopener noreferrer"
+        >Spotify'da dinle →</a>
+      </article>
+
     </div>
-  </div>
 
-  <div class="social-card social-card--podcast">
-    <svg class="social-icon" viewBox="0 0 40 40" aria-hidden="true">
-      <path d="M6 21v-3a14 14 0 0 1 28 0v3M6 21h6v13H9a3 3 0 0 1-3-3V21Zm28 0h-6v13h3a3 3 0 0 0 3-3V21Z"/>
-    </svg>
+  </section>
 
-    <div class="social-info">
-      <h2>Freudyen Hâller</h2>
-      <p>Psikanalizden gündelik hayata, podcast.</p>
+  <!-- INSTAGRAM VE PODCAST BAĞLANTILARI -->
+  <section class="social-grid" aria-label="Sosyal medya ve podcast">
+
+    <div class="social-card">
+
+      <svg class="social-icon" viewBox="0 0 40 40" aria-hidden="true">
+        <rect x="5" y="5" width="30" height="30" rx="9"/>
+        <circle cx="20" cy="20" r="7"/>
+        <circle cx="29" cy="11" r="1.5" fill="currentColor" stroke="none"/>
+      </svg>
+
+      <div class="social-info">
+
+        <h2>
+          <a
+            href="https://www.instagram.com/psikolog.dilarasacal/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >@psikolog.dilarasacal</a>
+        </h2>
+
+        <p>Psikoloji ve psikanaliz üzerine içerikler.</p>
+
+        <div class="instagram-mini-grid" aria-label="Instagram paylaşımları">
+
+          <a
+            href="https://www.instagram.com/p/DfmgQwlCDeV/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Dilara Saçal tanıtım paylaşımı"
+          >
+            <img
+              src="/assets/instagram-hakkimda.webp"
+              alt="Dilara Saçal, Klinik Psikolog, Psikoterapist"
+              loading="lazy"
+            >
+          </a>
+
+          <a
+            href="https://www.instagram.com/p/DfkQjkuiPQ0/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Psikanalitik Psikoterapi Nedir? paylaşımı"
+          >
+            <img
+              src="/assets/instagram-psikanalitik-psikoterapi.webp"
+              alt="Psikanalitik Psikoterapi Nedir?"
+              loading="lazy"
+            >
+          </a>
+
+          <a
+            href="https://www.instagram.com/p/Dfemx4QCKiq/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Psikoterapi Süreci Nasıl İlerler? paylaşımı"
+          >
+            <img
+              src="/assets/instagram-psikoterapi-sureci.webp"
+              alt="Psikoterapi Süreci Nasıl İlerler?"
+              loading="lazy"
+            >
+          </a>
+
+        </div>
+
+      </div>
     </div>
 
-    <div class="platforms" aria-label="Podcast platformları">
-      <a
-        href="https://open.spotify.com/show/0ZavSHQJgKE1FKTwuaeY1N"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Freudyen Hâller Spotify"
-      >Spotify</a>
+    <div class="social-card social-card--podcast">
 
-      <a
-        href="https://podcasts.apple.com/tr/podcast/freudyen-h%C3%A2ller/id6828113920"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Freudyen Hâller Apple Podcasts"
-      >Apple</a>
+      <svg class="social-icon" viewBox="0 0 40 40" aria-hidden="true">
+        <path d="M6 21v-3a14 14 0 0 1 28 0v3M6 21h6v13H9a3 3 0 0 1-3-3V21Zm28 0h-6v13h3a3 0 0 0 3-3V21Z"/>
+      </svg>
 
-      <a
-        href="https://www.youtube.com/@FreudyenHaller"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Freudyen Hâller YouTube"
-      >YouTube</a>
+      <div class="social-info">
+        <h2>Freudyen Hâller</h2>
+        <p>Psikanalizden gündelik hayata, podcast.</p>
+      </div>
+
+      <div class="platforms" aria-label="Podcast platformları">
+
+        <a
+          href="https://open.spotify.com/show/0ZavSHQJgKE1FKTwuaeY1N"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Freudyen Hâller Spotify"
+        >Spotify</a>
+
+        <a
+          href="https://podcasts.apple.com/tr/podcast/freudyen-h%C3%A2ller/id6828113920"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Freudyen Hâller Apple Podcasts"
+        >Apple</a>
+
+        <a
+          href="https://www.youtube.com/@FreudyenHaller"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Freudyen Hâller YouTube"
+        >YouTube</a>
+
+      </div>
     </div>
-  </div>
 
-</section>
+  </section>
 
 </main>
 
